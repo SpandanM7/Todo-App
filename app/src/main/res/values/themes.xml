@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <style name="Theme.Splash" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Set the background color of the splash screen -->
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
     <style name="Theme.OnlyAndroidTodo" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
