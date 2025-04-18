@@ -40,7 +40,7 @@ data class TodoItem(
     var isChecked: Boolean
 )
 
-// Save tsk showing some KTX extension error
+// Save tsk showing some KTX extension error CAN NOT FIX
 fun saveTodoItems(context: Context, items: List<TodoItem>) {
     val sharedPref = context.getSharedPreferences("todo_prefs", Context.MODE_PRIVATE)
     val editor = sharedPref.edit()
@@ -118,6 +118,7 @@ fun TodoScreen(isDarkTheme: Boolean, onThemeToggle: () -> Unit) {
                     Text("Save")
                 }
             },
+            //cancel button kaaj korse ekhon
             dismissButton = {
                 Button(onClick = { isEditing = false }) {
                     Text("Cancel")
@@ -167,7 +168,7 @@ fun TodoScreen(isDarkTheme: Boolean, onThemeToggle: () -> Unit) {
             )
 
             Spacer(modifier = Modifier.width(16.dp))
-
+//add task button has some issue with shape
             Button(
                 onClick = {
                     if (newTaskText.isNotBlank()) {
@@ -237,7 +238,6 @@ fun TodoScreen(isDarkTheme: Boolean, onThemeToggle: () -> Unit) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TodoItemRow(
     item: TodoItem,
